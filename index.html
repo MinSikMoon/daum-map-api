@@ -4,14 +4,18 @@
 <head>
     <meta charset="utf-8">
     <title>원, 선, 사각형, 다각형 표시하기</title>
+    <script type="text/javascript" src="./apiKey.js"></script>
 
 </head>
 
 <body>
     <div id="map" style="width:100%;height:350px;"></div>
-    <script type="text/javascript" src="apiKeys.js"></script>
-    
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey="+apiKey></script>
+
+    <script>
+        var daumUrl = "//dapi.kakao.com/v2/maps/sdk.js?appkey=" + apiKey;
+        document.write('<script type="text/javascript" src=' + daumUrl + '><' + '/script>');
+    </script>
+
     <script>
         var inputData = {
             "data": [{
@@ -36,22 +40,6 @@
 
         var centerPoint = new daum.maps.LatLng(33.450701, 126.570667);
 
-        var points = [
-            new daum.maps.LatLng(33.452344169439975, 126.56878163224233),
-            new daum.maps.LatLng(33.452739313807456, 126.5709308145358),
-            new daum.maps.LatLng(33.45178067090639, 126.5726886938753)
-        ];
-
-
-
-        var makeMarker = function (item, index) {
-            var marker = new daum.maps.Marker({
-                position: item,
-            });
-            marker.setTitle(index + "방문");
-            marker.setMap(map); //마커
-        }
-
         var makeMarkerFromJson = function (item, index) {
             var curPoint = new daum.maps.LatLng(Number(item.latitude), Number(item.longitude));
             var marker = new daum.maps.Marker({
@@ -73,7 +61,9 @@
         var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
         // [1]  LINE
         // 선을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 선을 표시합니다
-        var linePath = points;
+        alert(requestDatas.data);
+        var linePath = requestDatas.data;
+        
 
         // 지도에 표시할 선을 생성합니다
         var polyline = new daum.maps.Polyline({
