@@ -3,18 +3,44 @@
 
 <head>
     <meta charset="utf-8">
-    <title>원, 선, 사각형, 다각형 표시하기</title>
+    <title>POK Travler Dev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style/portfolio.css" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./apiKey.js"></script>
 </head>
 
 <body>
-    <nav id="topper" class="navbar navbar-fixed-top bg-light bg-gradient-light d-flex justify-content-center"><h3 class="text-center">POK Traveler</h3></nav>
-    <div id="map" class="rounded" style="width:100%;height:300px"></div>
+    <nav id="topper" class="navbar navbar-fixed-top bg-light bg-gradient-light d-flex justify-content-center rounded-top">
+        <a class="text-center navbar-brand">POK Traveler</a>
+    </nav>
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <h1></h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">일정 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">일정 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">일정 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div id="map" class="rounded" style="width:100%;height:200px"></div>
 
 
 
