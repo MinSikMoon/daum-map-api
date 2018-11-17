@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div id="map" style="width:100%;height:350px;"></div>
+    <div id="map" style="width:100%;height:600px"></div>
 
     <script>
         var daumUrl = "//dapi.kakao.com/v2/maps/sdk.js?appkey=" + apiKey;
@@ -35,6 +35,9 @@
             ]
         };
         var inputDataString = JSON.stringify(inputData);
+
+
+        //=================================================== 이 위로는 가변적인 데이터들
         var requestDatas = JSON.parse(inputDataString);
         //timeStampe순으로 정렬
 
@@ -62,8 +65,8 @@
 
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = {
-                center: centerPoint, // 지도의 중심좌표
-                level: 4, // 지도의 확대 레벨
+                center: latLngArr[0], // 지도의 중심좌표
+                level: 1, // 지도의 확대 레벨
                 draggable: true,
                 scrollwheel: true
             };
