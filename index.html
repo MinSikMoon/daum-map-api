@@ -12,16 +12,16 @@
     <script type="text/javascript" src="./apiKey.js"></script>
 </head>
 
-<body>
-    <nav id="topper" class="navbar navbar-fixed-top bg-light bg-gradient-light d-flex justify-content-center rounded-top">
+<body data-spy="scroll" data-target=".navbar">
+    <nav id="topper" class="navbar bg-light bg-gradient-light d-flex justify-content-center rounded-top">
         <a class="navbar-brand">제주도 여행 기록</a>
     </nav>
     <nav class="navbar navbar-expand-md bg-light navbar-light">
         <div>
-            <span class="badge badge-info">3박 4일</span> 
-            <span class="badge badge-success">국내</span> 
-            <span class="badge badge-light">#힐링</span> 
-            <span class="badge badge-light">#직장인</span> 
+            <span class="badge badge-info">3박 4일</span>
+            <span class="badge badge-success">국내</span>
+            <span class="badge badge-light">#힐링</span>
+            <span class="badge badge-light">#직장인</span>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -44,8 +44,35 @@
     </nav>
 
 
-
+    <div>
+        <h1>제주여행</h1>
+        <p>
+            Counting objects: 6, done.
+            Delta compression using up to 4 threads.
+            Compressing objects: 100% (6/6), done.
+            Writing objects: 100% (6/6), 1.26 KiB | 429.00 KiB/s, done.
+            Total 6 (delta 2), reused 0 (delta 0)
+            remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+            To https://github.com/MinSikMoon/daum-map-api.git
+            a8d1837..b29bf56 dev/bootstrap4 -> dev/bootstrap4
+        </p>
+    </div>
     <div id="map" class="rounded" style="width:100%;height:200px"></div>
+
+    <div>
+        <h1>제주여행</h1>
+        <p>
+            Counting objects: 6, done.
+            Delta compression using up to 4 threads.
+            Compressing objects: 100% (6/6), done.
+            Writing objects: 100% (6/6), 1.26 KiB | 429.00 KiB/s, done.
+            Total 6 (delta 2), reused 0 (delta 0)
+            remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+            To https://github.com/MinSikMoon/daum-map-api.git
+            a8d1837..b29bf56 dev/bootstrap4 -> dev/bootstrap4
+        </p>
+    </div>
+    <div id="map2" class="rounded" style="width:100%;height:200px"><h1>map2</h1></div>
 
 
 
@@ -92,7 +119,6 @@
         var latLngArr = makeLatLngArray(requestDatas.data);
 
         //center 자동으로 정해주는 로직 만들기
-        var centerPoint = new daum.maps.LatLng(33.450701, 126.570667);
 
         //마커 만들기
         var makeMarkers = function (item, index) {
@@ -105,7 +131,7 @@
 
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = {
-                center: latLngArr[1], // 지도의 중심좌표
+                center: latLngArr[0], // 지도의 중심좌표
                 level: 4, // 지도의 확대 레벨
                 draggable: true,
                 scrollwheel: true
@@ -126,7 +152,49 @@
         //지도에 그리기
         latLngArr.forEach(makeMarkers);
         polyline.setMap(map); //선
+
+
+
+
+
+
+
+
+        //==========================================map2를 위한 반복
+        //마커 만들기
+        var makeMarkers2 = function (item, index) {
+            var marker = new daum.maps.Marker({
+                position: item,
+            });
+            marker.setTitle(index + "방문");
+            marker.setMap(map2); //마커
+        }
+        var mapContainer = document.getElementById('map2'), // 지도를 표시할 div 
+            mapOption = {
+                center: latLngArr[1], // 지도의 중심좌표
+                level: 1, // 지도의 확대 레벨
+                draggable: true,
+                scrollwheel: true
+            };
+
+        var map2 = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 지도에 표시할 선을 생성합니다
+        var polyline = new daum.maps.Polyline({
+            path: latLngArr, // 선을 구성하는 좌표배열 입니다
+            strokeWeight: 5, // 선의 두께 입니다
+            strokeColor: '#000000', // 선의 색깔입니다
+            strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+            strokeStyle: 'solid' // 선의 스타일입니다
+        });
+
+
+        //지도에 그리기
+        latLngArr.forEach(makeMarkers2);
+        polyline.setMap(map2); //선
     </script>
+
+
 </body>
 
 </html>
