@@ -10,17 +10,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./apiKey.js"></script>
-    <style>
-        #topper {
-            background-color: blue;
-        }
-    </style>
 </head>
 
 <body>
-    <nav id="topper" class="navbar navbar-fixed-top">asdfasdf</nav>
-    <div id="map" style="width:100%;height:600px"></div>
+    <nav id="topper" class="navbar navbar-fixed-top bg-light bg-gradient-light d-flex justify-content-center"><h3 class="text-center">POK Traveler</h3></nav>
+    <div id="map" class="rounded" style="width:100%;height:300px"></div>
 
+
+
+    <!-- script -->
     <script>
         var daumUrl = "//dapi.kakao.com/v2/maps/sdk.js?appkey=" + apiKey;
         document.write('<script type="text/javascript" src=' + daumUrl + '><' + '/script>');
@@ -76,8 +74,8 @@
 
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
             mapOption = {
-                center: latLngArr[0], // 지도의 중심좌표
-                level: 1, // 지도의 확대 레벨
+                center: latLngArr[1], // 지도의 중심좌표
+                level: 4, // 지도의 확대 레벨
                 draggable: true,
                 scrollwheel: true
             };
