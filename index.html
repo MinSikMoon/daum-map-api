@@ -13,7 +13,12 @@
     <style>
         .navbar-toggler-icon {
             background-image: url('images/chevron-bottom.svg') !important; 
-            }
+        }
+              /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 
@@ -62,11 +67,45 @@
         </p>
     </div>
 
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://trazy-spot-images.s3.amazonaws.com/596-1213337755.jpg" alt="Los Angeles">
+            </div>
+            <div class="carousel-item">
+                <img src="https://trazy-spot-images.s3.amazonaws.com/596-7543815718.jpg" alt="Chicago">
+            </div>
+            <div class="carousel-item">
+                <img src="https://trazy-spot-images.s3.amazonaws.com/596-4005815275.jpg" alt="New York">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+    <!-- for line break -->
+    <h1 style="visibility:hidden;">line break</h1>
+    <h1>2일째</h1>
     <div id="map2" class="rounded" style="width:100%;height:200px">
         <h1>map2</h1>
     </div>
     <div>
-        <h1>2일째</h1>
         <p>
             이탈리아를 여행하는 많은 여행자는 대부분 로마에서 출발해 여정을 시작한다.
             과거와 현재가 공존하는 도시이자 역사의 숨결이 가득 담겨있는 로마.
