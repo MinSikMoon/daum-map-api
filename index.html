@@ -1,250 +1,274 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>POK Travler Dev</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./apiKey.js"></script>
     <style>
-        .navbar-toggler-icon {
-            background-image: url('images/chevron-bottom.svg') !important; 
-        }
-              /* Make the image fully responsive */
-        .carousel-inner img {
-            width: 100%;
-            height: 100%;
-        }
+      .navbar-toggler-icon {
+        background-image: url('images/chevron-bottom.svg') !important;
+      }
+      /* Make the image fully responsive */
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body data-spy="scroll" data-target=".navbar">
-    <nav id="topper" class="navbar bg-light bg-gradient-light d-flex justify-content-center rounded-top">
-        <a class="navbar-brand">제주도 여행 기록</a>
+  <body data-spy="scroll" data-target=".navbar">
+    <nav
+      id="topper"
+      class="navbar bg-light bg-gradient-light d-flex justify-content-center rounded-top"
+    >
+      <a class="navbar-brand">제주도 여행 기록</a>
     </nav>
     <nav class="navbar navbar-expand-md bg-light navbar-light">
-        <div>
-            <span class="badge badge-info">3박 4일</span>
-            <span class="badge badge-success">국내</span>
-            <span class="badge badge-light">#힐링</span>
-            <span class="badge badge-light">#직장인</span>
-        </div>
-        <div>
-            목차
-        </div>
-        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <div>
+        <span class="badge badge-info">3박 4일</span>
+        <span class="badge badge-success">국내</span>
+        <span class="badge badge-light">#힐링</span>
+        <span class="badge badge-light">#직장인</span>
+      </div>
+      <div>목차</div>
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">일정 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">일정 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">일정 3</a>
-                </li>
-            </ul>
-        </div>
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">일정 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">일정 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">일정 3</a></li>
+        </ul>
+      </div>
     </nav>
 
     <!-- for line break -->
     <h6 style="visibility:hidden;">line break</h6>
-    <hr>
-    
+    <hr />
+
     <h4>1일째</h4>
     <div id="map" class="rounded" style="width:100%;height:200px"></div>
     <div>
-        <p>
-            이탈리아를 여행하는 많은 여행자는 대부분 로마에서 출발해 여정을 시작한다.
-            과거와 현재가 공존하는 도시이자 역사의 숨결이 가득 담겨있는 로마.
-            ＃낭만의 도시, 로마 야경 투어 코스
-            로마 자유여행을 계획하고 있는 사람들에게 꼭 한번 추천하고 싶은 야경투어!
-            낭만을 꾹꾹 눌러 담은 것 같은 저녁 시간의 로마는 또 다른 매력을 보여주었다.
-            다양한 야경투어 상품들이 있지만, 내가 직접 다녀온 코스를 소개하고자 한다
-        </p>
+      <p>
+        이탈리아를 여행하는 많은 여행자는 대부분 로마에서 출발해 여정을
+        시작한다. 과거와 현재가 공존하는 도시이자 역사의 숨결이 가득 담겨있는
+        로마. ＃낭만의 도시, 로마 야경 투어 코스 로마 자유여행을 계획하고 있는
+        사람들에게 꼭 한번 추천하고 싶은 야경투어! 낭만을 꾹꾹 눌러 담은 것 같은
+        저녁 시간의 로마는 또 다른 매력을 보여주었다. 다양한 야경투어 상품들이
+        있지만, 내가 직접 다녀온 코스를 소개하고자 한다
+      </p>
     </div>
 
     <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
 
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-
-        <!-- The slideshow -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://trazy-spot-images.s3.amazonaws.com/596-1213337755.jpg" alt="Los Angeles">
-            </div>
-            <div class="carousel-item">
-                <img src="https://trazy-spot-images.s3.amazonaws.com/596-7543815718.jpg" alt="Chicago">
-            </div>
-            <div class="carousel-item">
-                <img src="https://trazy-spot-images.s3.amazonaws.com/596-4005815275.jpg" alt="New York">
-            </div>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://trazy-spot-images.s3.amazonaws.com/596-1213337755.jpg"
+            alt="Los Angeles"
+          />
         </div>
+        <div class="carousel-item">
+          <img
+            src="https://trazy-spot-images.s3.amazonaws.com/596-7543815718.jpg"
+            alt="Chicago"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://trazy-spot-images.s3.amazonaws.com/596-4005815275.jpg"
+            alt="New York"
+          />
+        </div>
+      </div>
 
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
-
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
     </div>
 
     <!-- for line break -->
     <h6 style="visibility:hidden;">line break</h6>
-    <hr>
+    <hr />
 
     <h4>2일째</h4>
     <div id="map2" class="rounded" style="width:100%;height:200px">
-        <h1>map2</h1>
+      <h1>map2</h1>
     </div>
     <div>
-        <p>
-            이탈리아를 여행하는 많은 여행자는 대부분 로마에서 출발해 여정을 시작한다.
-            과거와 현재가 공존하는 도시이자 역사의 숨결이 가득 담겨있는 로마.
-            ＃낭만의 도시, 로마 야경 투어 코스
-            로마 자유여행을 계획하고 있는 사람들에게 꼭 한번 추천하고 싶은 야경투어!
-            낭만을 꾹꾹 눌러 담은 것 같은 저녁 시간의 로마는 또 다른 매력을 보여주었다.
-            다양한 야경투어 상품들이 있지만, 내가 직접 다녀온 코스를 소개하고자 한다
-        </p>
+      <p>
+        이탈리아를 여행하는 많은 여행자는 대부분 로마에서 출발해 여정을
+        시작한다. 과거와 현재가 공존하는 도시이자 역사의 숨결이 가득 담겨있는
+        로마. ＃낭만의 도시, 로마 야경 투어 코스 로마 자유여행을 계획하고 있는
+        사람들에게 꼭 한번 추천하고 싶은 야경투어! 낭만을 꾹꾹 눌러 담은 것 같은
+        저녁 시간의 로마는 또 다른 매력을 보여주었다. 다양한 야경투어 상품들이
+        있지만, 내가 직접 다녀온 코스를 소개하고자 한다
+      </p>
     </div>
-
-
 
     <!-- script -->
     <script>
-        var daumUrl = "//dapi.kakao.com/v2/maps/sdk.js?appkey=" + apiKey;
-        document.write('<script type="text/javascript" src=' + daumUrl + '><' + '/script>');
+      var daumUrl = '//dapi.kakao.com/v2/maps/sdk.js?appkey=' + apiKey;
+      document.write(
+        '<script type="text/javascript" src=' + daumUrl + '><' + '/script>'
+      );
     </script>
 
     <script>
-        var inputData = {
-            "data": [{
-                    "latitude": "33.452344169439975",
-                    "longitude": "126.56878163224233",
-                    "time": "2018-10-13 14:05:05"
-                },
-                {
-                    "latitude": "33.452739313807456",
-                    "longitude": "126.5709308145358",
-                    "time": "2018-10-11 10:00:05"
-                },
-                {
-                    "latitude": "33.45178067090639",
-                    "longitude": "126.5726886938753",
-                    "time": "2018-10-11 02:05:05"
-                }
-            ]
+      var inputData = {
+        data: [
+          {
+            latitude: '33.452344169439975',
+            longitude: '126.56878163224233',
+            time: '2018-10-13 14:05:05',
+          },
+          {
+            latitude: '33.452739313807456',
+            longitude: '126.5709308145358',
+            time: '2018-10-11 10:00:05',
+          },
+          {
+            latitude: '33.45178067090639',
+            longitude: '126.5726886938753',
+            time: '2018-10-11 02:05:05',
+          },
+        ],
+      };
+      var inputDataString = JSON.stringify(inputData);
+
+      //=================================================== 이 위로는 가변적인 데이터들
+      var requestDatas = JSON.parse(inputDataString);
+      //timeStampe순으로 정렬
+
+      //requestData의 data배열에서 위경도만 뽑아서 daum.maps.LatLng 배열을 만든다.
+      var makeLatLngArray = function(jsonArr) {
+        var resArr = [];
+        for (var i = 0; i < jsonArr.length; i++) {
+          resArr.push(
+            new daum.maps.LatLng(
+              Number(jsonArr[i].latitude),
+              Number(jsonArr[i].longitude)
+            )
+          );
+        }
+        return resArr;
+      };
+      var latLngArr = makeLatLngArray(requestDatas.data);
+
+      //center 자동으로 정해주는 로직 만들기
+
+      //마커 만들기
+      var makeMarkers = function(item, index) {
+        var marker = new daum.maps.Marker({
+          position: item,
+        });
+        marker.setTitle(index + '방문');
+        marker.setMap(map); //마커
+      };
+
+      var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+          center: latLngArr[0], // 지도의 중심좌표
+          level: 3, // 지도의 확대 레벨
+          draggable: false,
+          scrollwheel: true,
         };
-        var inputDataString = JSON.stringify(inputData);
 
+      var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-        //=================================================== 이 위로는 가변적인 데이터들
-        var requestDatas = JSON.parse(inputDataString);
-        //timeStampe순으로 정렬
+      // 지도에 표시할 선을 생성합니다
+      var polyline = new daum.maps.Polyline({
+        path: latLngArr, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#000000', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid', // 선의 스타일입니다
+      });
 
-        //requestData의 data배열에서 위경도만 뽑아서 daum.maps.LatLng 배열을 만든다.
-        var makeLatLngArray = function (jsonArr) {
-            var resArr = [];
-            for (var i = 0; i < jsonArr.length; i++) {
-                resArr.push(new daum.maps.LatLng(Number(jsonArr[i].latitude), Number(jsonArr[i].longitude)));
-            }
-            return resArr;
-        }
-        var latLngArr = makeLatLngArray(requestDatas.data);
+      //지도에 그리기
+      latLngArr.forEach(makeMarkers);
+      polyline.setMap(map); //선
 
-        //center 자동으로 정해주는 로직 만들기
-
-        //마커 만들기
-        var makeMarkers = function (item, index) {
-            var marker = new daum.maps.Marker({
-                position: item,
-            });
-            marker.setTitle(index + "방문");
-            marker.setMap(map); //마커
-        }
-
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-            mapOption = {
-                center: latLngArr[0], // 지도의 중심좌표
-                level: 3, // 지도의 확대 레벨
-                draggable: false,
-                scrollwheel: true
-            };
-
-        var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-        // 지도에 표시할 선을 생성합니다
-        var polyline = new daum.maps.Polyline({
-            path: latLngArr, // 선을 구성하는 좌표배열 입니다
-            strokeWeight: 5, // 선의 두께 입니다
-            strokeColor: '#000000', // 선의 색깔입니다
-            strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-            strokeStyle: 'solid' // 선의 스타일입니다
+      //==========================================map2를 위한 반복
+      //마커 만들기
+      var makeMarkers2 = function(item, index) {
+        var marker = new daum.maps.Marker({
+          position: item,
         });
+        marker.setTitle(index + '방문');
+        marker.setMap(map2); //마커
+      };
+      var mapContainer = document.getElementById('map2'), // 지도를 표시할 div
+        mapOption = {
+          center: latLngArr[1], // 지도의 중심좌표
+          level: 3, // 지도의 확대 레벨
+          draggable: false,
+          scrollwheel: true,
+        };
 
+      var map2 = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-        //지도에 그리기
-        latLngArr.forEach(makeMarkers);
-        polyline.setMap(map); //선
+      // 지도에 표시할 선을 생성합니다
+      var polyline = new daum.maps.Polyline({
+        path: latLngArr, // 선을 구성하는 좌표배열 입니다
+        strokeWeight: 5, // 선의 두께 입니다
+        strokeColor: '#000000', // 선의 색깔입니다
+        strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+        strokeStyle: 'solid', // 선의 스타일입니다
+      });
 
-
-
-
-
-
-
-
-        //==========================================map2를 위한 반복
-        //마커 만들기
-        var makeMarkers2 = function (item, index) {
-            var marker = new daum.maps.Marker({
-                position: item,
-            });
-            marker.setTitle(index + "방문");
-            marker.setMap(map2); //마커
-        }
-        var mapContainer = document.getElementById('map2'), // 지도를 표시할 div 
-            mapOption = {
-                center: latLngArr[1], // 지도의 중심좌표
-                level: 3, // 지도의 확대 레벨
-                draggable: false,
-                scrollwheel: true
-            };
-
-        var map2 = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-        // 지도에 표시할 선을 생성합니다
-        var polyline = new daum.maps.Polyline({
-            path: latLngArr, // 선을 구성하는 좌표배열 입니다
-            strokeWeight: 5, // 선의 두께 입니다
-            strokeColor: '#000000', // 선의 색깔입니다
-            strokeOpacity: 0.7, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-            strokeStyle: 'solid' // 선의 스타일입니다
-        });
-
-
-        //지도에 그리기
-        latLngArr.forEach(makeMarkers2);
-        polyline.setMap(map2); //선
+      //지도에 그리기
+      latLngArr.forEach(makeMarkers2);
+      polyline.setMap(map2); //선
     </script>
-
-
-</body>
-
+  </body>
+  <footer class = "bg-light bg-gradient-light d-flex justify-content-center rounded-top">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col text-center border border-secondary">
+          <a href="#"> <img height="40" src="images/cog.svg"></span> </a>
+        </div>
+        <div class="col text-center border border-secondary">
+          <a href="#"> <img height="40" src="images/check.svg"></span> </a>
+        </div>
+        <div class="col text-center border border-secondary">
+          <a href="#"> <img height="40" src="images/clipboard.svg"></span> </a>
+        </div>
+        <div class="col text-center border border-secondary">
+          <a href="#"> <img height="40" src="images/chevron-bottom.svg"></span> </a>
+        </div>
+        <div class="col text-center border border-secondary">
+          <a href="#"> <img height="40" src="images/command.svg"></span> </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>
